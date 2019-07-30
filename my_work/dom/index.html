@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>THE DOM</h1>
+
+
+    <!-- Query Selectors -->
+    <div>
+        <p>this is a paragraph</p>
+        <p>this is another paragraph</p>
+        <p class="error">this is p.error</p>
+
+        <div class="error">this is div.error</div>
+    </div>
+
+
+    <!-- Other Selectors -->
+    <h2 id="tittle">this is h2.tittle</h2>
+
+    <div>
+        <p>this is a paragraph 1</p>
+        <p>this is another paragraph</p>
+        <p class="alert">this is p.alert</p>
+
+        <div class="alert">this is div.alert</div>
+    </div>
+
+    <!-- Changing Content -->
+    <div class="content">
+        <p>this is a paragraph inside div.content</p>
+    </div>
+
+
+    <!-- Getting & Setting Attributes -->
+    <a href="https://www.google.com/#cns=0">google link</a>
+
+
+    <!-- Changing CSS Styles -->
+    <h3 style="color: blue">this is h3 with css styles</h3>
+
+    <!-- Adding & Removing classes -->
+    <pre class="success">
+        this is a line in pre
+        this is a line in pre
+        this is a line in pre
+    </pre>
+
+
+    <!-- Adding & Removing classes -->
+    <h4>lorem lorem lorem</h4>
+    <h4>lorem lorem text1</h4>
+    <h4>lorem lorem lorem</h4>
+    <h4>lorem text2 lorem</h4>
+    <h4>lorem lorem lorem</h4>
+    <h4>lorem text1 lorem</h4>
+    <h4>lorem lorem lorem</h4>
+    <h4>text2 lorem lorem</h4>
+
+
+    <!-- Parents, Children & Siblings -->
+    <article>
+        <p>this is a paragraph inside an article before h5</p>
+        <h5>this is h3 inside an article</h5>
+        <p>this is a paragraph inside an article after h5</p>
+        <p>this is a paragraph inside an article</p>
+        <p>this is a paragraph inside an article</p>
+        <p>this is a paragraph inside an article</p>
+    </article>
+
+
+
+    <!-- Events -->
+
+    <!-- Event Basics -->
+    <ul class="list1">
+        <li>link item 1</li>
+        <li>link item 2</li>
+        <li>link item 3</li>
+        <li>link item 4</li>
+        <li>link item 5</li>
+    </ul>
+    <button class="button1">click to console</button>
+
+
+    <!--using forEach() method and target property -->
+    <ul class="list2">
+        <li>click to line through</li>
+        <li>click to line through</li>
+        <li>click to line through</li>
+        <li>click to line through</li>
+        <li>click to line through</li>
+    </ul>
+    <!-- applying a style on all the elements by clicking on the button -->
+    <button class="button2">click to line through all</button>
+
+
+    <!-- removing elements -->
+    <!-- example 1 -->
+    <ul class="list3">
+        <li>click to delete</li>
+        <li>click to delete</li>
+        <li>click to delete</li>
+        <li>click to delete</li>
+        <li>click to delete</li>
+    </ul>
+    <!-- example 2 -->
+    <button class="button3">click to delete all</button>
+
+    <!-- adding elements -->
+    <ul class="list4">
+        <li>old item</li>
+        <li>old item</li>
+        <li>old item</li>
+        <li>old item</li>
+    </ul>
+    <button class="button4">click to add something new</button>
+
+    <!-- More Dom Events -->
+    <div class="more">
+
+        <!-- copy -->
+        <p class="copy">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <!-- mousemove -->
+        <div class="box">move the mouse around this box</div>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+    </div>
+
+
+    <!-- Bulging a Popup -->
+
+    <button class="popup-button">click me to popup </button>
+
+    <div class="popup-wrapper">
+
+        <div class="popup">
+            <div class="popup-close">X</div>
+            <div class="popup-content">
+                <h2>Hello World</h2>
+                <p>it's summer!</p>
+                <a href="#">some link</a>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>

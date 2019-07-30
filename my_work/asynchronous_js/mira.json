@@ -1,0 +1,5 @@
+[
+    {"todo": "Driving lesson", "day": "Tuesday", "hour": 10, "checked": false},
+    {"todo": "Spa", "day": "Thursday", "hour": 17, "checked": true},
+    {"todo": "Family gathering", "day": "Sunday", "hour": 15, "checked": true}
+]

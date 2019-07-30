@@ -1,0 +1,88 @@
+/* selectors */
+.error {
+    padding: 20px;
+    margin: 20px;
+    color: red;
+    border: 2px solid black;
+};
+
+.alert {
+    padding: 20px;
+    margin: 20px;
+    color: yellow; 
+    border: 2px solid black;  
+};
+
+/* Adding classes */
+.success {
+    padding: 20px;
+    margin: 20px;
+    color: red;
+    border: 2px solid black;
+};
+
+
+
+/* Events */
+li {
+    list-style-type: none;
+    padding: 8px;
+    margin: 8px, auto;
+    max-width: 200px;
+    background: #eee;
+    border: 1px dotted #ddd;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    margin: 10px 0;
+    padding: 20px;
+    text-align: center;
+    background: #eee;
+}
+
+/* Popup */
+.popup-button {
+    display: block;
+    margin: 20px auto;
+    background: crimson;
+    color: white;
+    border: 0;
+    padding: 10px 10px;
+}
+
+.popup-wrapper {
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.popup {
+    font-family: Arial;
+    text-align: center;
+    width: 100%;
+    max-width: 300px;
+    margin: 10px auto;
+    padding: 20px;
+    background: white;
+    position: relative;
+}
+
+.popup a {
+    background: crimson;
+    color: white;
+    text-decoration: none;
+    padding: 6px 10px;
+}
+
+.popup-close {
+    position: absolute;
+    top: 5px;
+    right: 8px;
+    cursor: pointer;
+}
