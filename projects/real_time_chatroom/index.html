@@ -11,70 +11,84 @@
     <title>Chat App</title>
 </head>
 
-<!-- container & tittle -->
-
-<div class="container my-4">
-    <h1 class="my-4 text-center">Chat App</h1>
-
-
-
-    <!-- buttons for chatrooms -->
-
-    <div class="chat-rooms mb-3 text-center">
-        <div class="my-2">Choose a chatroom</div>
-        <button class="btn" id="general">#general</button>
-        <button class="btn" id="gaming">#gaming</button>
-        <button class="btn" id="music">#music</button>
-        <button class="btn" id="studies">#studies</button>
-    </div>
-
-
-
-    <!-- chat list / window -->
-
-    <div class="chat-window">
-        <ul class="chat-list list-group"></ul>
-    </div>
-
-
-
-    <!-- new chat form -->
-
-    <form class="new-chat my-3">
-        <div class="input-group">
-            <div class="input-group-prepend">
-                <div class="input-group-text">Your message:</div>
-            </div>
-            <input type="text" id="message" class="form-control" required>
-            <div class="input-group-append">
-                <input type="submit" class="btn" value="send">
-            </div>
-        </div>
-    </form>
-
-
-
-    <!-- update name form -->
-
-    <div class="new-name my-3">
-        <div class="input-group">
-            <div class="input-group-prepend">
-                <div class="input-group-text">Update name:</div>
-            </div>
-            <input type="text" id="name" class="form-control" required>
-            <div class="input-group-append">
-                <input type="submit" class="btn" value="update">
-            </div>
-        </div>
-        <div class="update-msg"></div>
-    </div>
-
-
-
-</div>
-
-
 <body>
+
+    <!-- container & tittle -->
+
+    <div class="container my-4">
+        <h1 class="my-4 text-center">Chat App</h1>
+
+
+        <!-- buttons for chatrooms -->
+
+        <div class="chat-rooms mb-3 text-center">
+            <div class="my-2">Choose a chatroom</div>
+            <button class="btn" id="general">#general</button>
+            <button class="btn" id="gaming">#gaming</button>
+            <button class="btn" id="music">#music</button>
+            <button class="btn" id="studies">#studies</button>
+        </div>
+
+
+        <!-- chat list / window -->
+
+        <div class="chat-window">
+            <ul class="chat-list list-group"></ul>
+        </div>
+
+
+        <!-- new chat form -->
+
+        <form class="new-chat my-3">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">Your message:</div>
+                </div>
+                <input type="text" id="message" class="form-control" required>
+                <div class="input-group-append">
+                    <input type="submit" class="btn" value="send">
+                </div>
+            </div>
+        </form>
+
+
+        <!-- update name form -->
+
+        <div class="new-name my-3">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">Update name:</div>
+                </div>
+                <input type="text" id="name" class="form-control" required>
+                <div class="input-group-append">
+                    <input type="submit" class="btn" value="update">
+                </div>
+            </div>
+            <div class="update-msg"></div>
+        </div>
+
+    </div> <!-- end of the container -->
+
+<!------------------------------------------------------------------------------------------------->
+
+    <!-- firebase script -->
+    <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-firestore.js"></script>
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyDQFq4M2-Fs69fwl7yfPK5sYxH0V4uRZIY",
+            authDomain: "real-time-chatroom-4c41e.firebaseapp.com",
+            databaseURL: "https://real-time-chatroom-4c41e.firebaseio.com",
+            projectId: "real-time-chatroom-4c41e",
+            storageBucket: "real-time-chatroom-4c41e.appspot.com",
+            messagingSenderId: "915983047865",
+            appId: "1:915983047865:web:0aeb8d620ec80df6"
+        };
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+    </script>
+
+    <!-- my scripts -->
     <script src="./scripts/chat.js"></script>
     <script src="./scripts/UI.js"></script>
     <script src="./scripts/app.js"></script>
