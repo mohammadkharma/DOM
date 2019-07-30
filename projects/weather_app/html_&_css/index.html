@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Weather Application</title>
+</head>
+
+<body>
+
+  <!-- Wrapping all the App in a container div -->
+  <div class="container my-5 mx-auto">
+
+    <!-- Header -->
+    <h1 class="text-muted text-center my-4">Get Weather</h1>
+
+    <!-- The input from  -->
+    <form class="change-location my-4 text-center text-muted">
+      <label for="city">Enter a location for weather information</label>
+      <input type="text" name="city" class="form-control p-4">
+    </form>
+
+    <!-- Wrapping the city details and the weather conditions in a card div -->
+    <div class="card shadow-lg rounded d-none">
+
+      <!-- The time image -->
+      <img src="" class="time ">
+
+      <!--The icons -->
+      <div class="icon bg-light mx-auto text-center">
+        <img src="">
+      </div>
+
+      <!-- The details -->
+      <div class="text-muted text-uppercase text-center details">
+        <h5 class="my-3">City name</h5>
+        <div class="my-3">Weather condition</div>
+        <div class="display-4 my-4">
+          <span>temp</span>
+          <span>&deg;C</span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- forecast.js should be before app.js,
+    because the request functions on forecast.js
+    (getCity & getWeather) will be declared and called in app.js  -->
+  <script src="/scripts/forecast.js"></script>
+  <script src="/scripts/app.js"></script>
+</body>
+
+</html>

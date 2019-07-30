@@ -1,0 +1,38 @@
+header{
+    background: black;
+    padding: 10px;
+}
+h1{
+    color: white;
+    font-size: 70px;
+    text-align: center;
+}
+
+.nav-menu{
+    background: rgb(41, 175, 228);
+    color: white;
+    height: 40px;
+}
+
+ul{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    font-size: 30px;
+}
+
+.toggle{
+    height: auto;
+    text-align: center;
+    color: rgb(1, 167, 125);
+    background: black;
+}
+
+.actors{
+    visibility: hidden;  
+    color: white;  
+}
+
+
+
+

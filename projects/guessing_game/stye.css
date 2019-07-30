@@ -1,0 +1,50 @@
+body {
+    background: black;
+    box-sizing: border-box;
+    font-family: 'Quando', serif;
+    text-align: center;
+    text-shadow: 0px 15px 15px rgb(58, 52, 16);
+    padding: 30px;
+    color: rgb(218, 165, 32);
+}
+
+.container {
+    padding: 20px;
+    border-radius: 20px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 80px;
+    margin: 0;
+
+}
+
+h2, form {
+    margin: 50px;
+}
+
+input {
+    width: 60%;
+    padding: 10px;
+    font-size: 24px;
+    border: 1px solid rgb(218, 165, 32);
+    background: linear-gradient(to right, rgb(255, 255, 255), rgb(241, 241, 241), rgb(218, 165, 32));
+}
+
+button {
+    width: 20%;
+    border-radius: 6px;
+    border: 0;
+    padding: 10px;
+    color: white;
+    background: linear-gradient(to right, rgb(218, 165, 32), rgb(105, 79, 13));
+    font-size: 25px;
+    cursor: move;
+}
+
+#playAgain {
+    display: none;
+    margin: auto;
+    color: white;
+}

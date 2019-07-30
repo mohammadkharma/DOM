@@ -1,0 +1,94 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background: linear-gradient(to left, #000066 30%, #999966 100%);
+}
+
+#border {
+    float: right;
+    margin-top: 5px;
+    margin-right: 50px;
+    padding: 30px;
+    border-left: 2px solid #999966ab;
+    border-bottom: 2px solid #999966ab;
+}
+
+.intro {
+    padding: 30px;
+    color: #fff;
+    height: 50%;
+    border-radius: 5px;
+    box-shadow: 40px -10px 70px 30px #000029; 
+    background: linear-gradient(to top, #000066 60%, #999966ab 100%);
+}
+
+.intro h1 {
+    border-bottom: 5px double rgba(34, 170, 224, 0.548);
+}
+
+p {
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    border-bottom: 1px solid rgba(34, 170, 224, 0.548);
+}
+
+img {
+    width: 15px;
+    height: 15px;
+}
+
+.container {
+    max-width: 400px;
+    border-radius: 50px;
+    margin-top: 50px;
+    margin-left: 100px;
+    height: 60%;
+    font-size: 18px;
+    box-shadow: 20px 20px 50px 10px blue;
+}
+
+h1, .addNew {
+    text-shadow: 5px 5px 15px blue;
+}
+
+input[type=text], input[type=text]:focus {
+    border-radius: 20px;
+    color: #fff;
+    border: none;
+    background: #0000668c;
+    max-width: 400px;
+    height: 70px;
+    font-size: 18px;
+}
+
+.todos li {
+    background: #423a6f;
+    box-shadow: 10px 10px 30px 5px #7c4d7c;
+}
+
+.delete {
+    cursor: pointer;
+}
+
+.filtered {
+    display: none !important;
+}
+
+#reset {
+    display: block;
+    margin: auto;
+    padding: 10px 20px;
+    color: #000066cb;
+    background: rgba(255, 255, 255, 0.658);
+    border: 2px solid #000066cb;
+    border-radius: 10px;
+}
+
+a {
+    color: #000066;
+}
+
+a:hover {
+    font-size: 24px;
+}

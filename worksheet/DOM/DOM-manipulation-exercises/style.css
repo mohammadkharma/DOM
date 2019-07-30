@@ -1,0 +1,35 @@
+
+.container {
+    border: 2px solid black;
+    max-width: 500px;
+    padding: 20px;
+    margin-top: 20px;
+    background: rgb(204, 203, 203);
+}
+
+#size, #alertForm, .firstNum, .secondNum, .radius {
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+
+h4 {
+    text-align: center;
+    padding: 10px;
+    text-decoration: underline;
+}
+
+button {
+    display: block;
+    position: relative;
+    left: 35%;
+    top: 10px;
+    margin: 10px;
+    width: 30%;
+}
+
+p {
+    background-color: white;
+    margin-top: 20px;
+    text-align: center;
+}

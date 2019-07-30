@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body onclick="showCoords(event)">
+
+    <div class="container">
+        <h4>Exercise 1: Calculation</h4>
+        <form id="calcForm">
+            <input type="text" class="firstNum">
+            <input type="text" class="secondNum">
+        </form>
+        <button class="multiply">Multiply</button>
+        <button class="divide">Divide</button>
+        <p class="result"></p>
+    </div>
+    <hr>
+
+    <div class="container">
+        <h4>Exercise 2: Check-boxes</h4>
+        <form id="alertForm">
+            <h4>Fruits</h4>
+            <input type="checkbox" class="apple">Apple<br>
+            <input type="checkbox" class="banana">Banana<br>
+            <input type="checkbox" class="orange">Orange<br>
+            <!-- <button class="submit">Submit</button> -->
+        </form>
+    </div>
+    <hr>
+
+    <div class="container">
+        <h4>Exercise 3: Volume</h4>
+        <form id="volumeForm">
+            <input type="text" class="radius">
+        </form>
+        <button class="calculate">Calculate</button>
+        <p class="result1"></p>
+    </div>
+    <hr>
+
+    <div class="container">
+        <h4>Exercise 4: Height & Width</h4>
+        <h2 id="size"></h2>
+    </div>
+    <hr>
+
+
+    <div class="container">
+        <h4>BONUS</h4>
+        <p id="HoverMe">[<a href="#" onMouseOver="highlight()" onMouseOut="return_normal()">When the user mouses over THIS link, the bold words of the following paragraph will be highlighted</a>]</p>
+        <p id="strong">These <strong>exercises</strong> are all <strong>aimed</strong> at making you
+            <strong>familiar</strong> with the <strong>document object model</strong> manipulation using
+            <strong>JavaScript</strong>!</p>
+    </div>
+
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>

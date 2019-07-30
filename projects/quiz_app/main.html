@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Quiz Application</title>
+</head>
+
+<body>
+
+    <!-- top section -->
+    <div class="intro py-3 bg-white text-center">
+        <div class="container">
+            <h2 class="text-primary display-3 my-4">Quiz</h2>
+        </div>
+    </div>
+
+    <!-- result section -->
+    <div id="home" class="result py-4 d-none bg-light text-center">
+        <div class="container lead">
+            <p>Your results are <span class="text-primary display-4 p-3">0%</span></p>
+        </div>
+    </div>
+
+    <!-- quiz section -->
+    <div class="quiz py-4 bg-primary">
+        <div class="container">
+            <h2 class="my-5 text-white">On with the questions...</h2>
+
+            <form class="quiz-form text-white">
+                <!-- q1 -->
+                <div class="my-5">
+                    <p class="lead font-weight-normal">1. How do we talk?</p>
+                    <div class="form-check my-2 text-white-50">
+                        <input type="radio" name="q1" value="A" checked>
+                        <label for="" class="form-check-label">Through our nose</label>
+                    </div>
+                    <div class="form-check my-2 text-white-50">
+                        <input type="radio" name="q1" value="B">
+                        <label for="" class="form-check-label">Through our mouth</label>
+                    </div>
+                </div>
+
+                <!-- q2 -->
+                <div class="my-5">
+                    <p class="lead font-weight-normal">2. How do we hear?</p>
+                    <div class="form-check my-2 text-white-50">
+                        <input type="radio" name="q2" value="A" checked>
+                        <label for="" class="form-check-label">Through our eyes</label>
+                    </div>
+                    <div class="form-check my-2 text-white-50">
+                        <input type="radio" name="q2" value="B">
+                        <label for="" class="form-check-label">Through our ears</label>
+                    </div>
+                </div>
+
+                <!-- q3 -->
+                <div class="my-5">
+                    <p class="lead font-weight-normal">3. How do we see?</p>
+                    <div class="form-check my-2 text-white-50">
+                        <input type="radio" name="q3" value="A" checked>
+                        <label for="" class="form-check-label">Through our hands</label>
+                    </div>
+                    <div class="form-check my-2 text-white-50">
+                        <input type="radio" name="q3" value="B">
+                        <label for="" class="form-check-label">Through our eyes</label>
+                    </div>
+                </div>
+
+                <!-- q4 -->
+                <div class="my-5">
+                    <p class="lead font-weight-normal">4. How do we walk</p>
+                    <div class="form-check my-2 text-white-50">
+                        <input type="radio" name="q4" value="A" checked>
+                        <label for="" class="form-check-label">Through our nose</label>
+                    </div>
+                    <div class="form-check my-2 text-white-50">
+                        <input type="radio" name="q4" value="B">
+                        <label for="" class="form-check-label">Through our legs</label>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <input type="submit" class="btn btn-light toHome">
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+
+
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>

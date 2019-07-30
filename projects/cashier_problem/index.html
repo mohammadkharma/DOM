@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Cashier</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+
+        <form>
+            <input type="text" name="payment" placeholder="Enter payment...">
+            <input type="text" name="bill" placeholder="Enter bill...">
+            <input type="submit" value="Change">
+        </form>
+
+        <button id="changeAgain">Change again</button>
+
+        <div id="tables">
+            <table>
+                <tr id="notes">
+                    <th><img src="200e.jpeg" alt=""></th>
+                    <th><img src="100e.jpeg" alt=""></th>
+                    <th><img src="50e.png" alt=""></th>
+                    <th><img src="20e.jpg" alt=""></th>
+                    <th><img src="10e.jpeg" alt=""></th>
+                    <th><img src="5e.jpeg" alt=""></th>
+                </tr>
+                <tr id="notesAmount">
+                    <td>x 0</td>
+                    <td>x 0</td>
+                    <td>x 0</td>
+                    <td>x 0</td>
+                    <td>x 0</td>
+                    <td>x 0</td>
+                </tr>
+            </table>
+
+            <hr>
+
+            <table>
+                <tr id="coins">
+                    <th><img src="2e.png" alt=""></th>
+                    <th><img src="1e.png" alt=""></th>
+                    <th><img src="50c.png" alt=""></th>
+                    <th><img src="20c.png" alt=""></th>
+                    <th><img src="10c.png" alt=""></th>
+                    <th><img src="5c.png" alt=""></th>
+                    <th><img src="2c.png" alt=""></th>
+                    <th><img src="1c.png" alt=""></th>
+                    <th class="changeAmount">Change amount:</th>
+                </tr>
+                <tr id="coinsAmount">
+                    <td>x 0</td>
+                    <td>x 0</td>
+                    <td>x 0</td>
+                    <td>x 0</td>
+                    <td>x 0</td>
+                    <td>x 0</td>
+                    <td>x 0</td>
+                    <td>x 0</td>
+                    <td class="changeAmount"></td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

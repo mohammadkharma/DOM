@@ -1,0 +1,58 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <title>Todo List</title>
+</head>
+
+<body>
+
+  <!-- Small info section on the right of the page -->
+  <div id="border">
+      <div class="intro">
+          <h1 class="mb-5">To-Do List App</h1>
+          <p>- Add items<img src="plus.png"></p>
+          <p>- Delete items<img src="delete.png"></p>
+          <p>- Search items<img src="loupe.png"></p>
+        </div>
+  </div>
+
+  <!-- The App container -->
+  <div class="container">
+
+    <!-- Tittle and searching todos -->
+    <header class="text-center text-light my-4">
+      <h1 class="mb-4">Todo List</h1>
+      <form class="search">
+        <input class="form-control m-auto" type="text" name="search" placeholder="search todos" />
+      </form>
+    </header>
+
+    <!-- The todo items -->
+    <ul class="list-group todos mx-auto text-light">
+      <!-- <li class="list-group-item d-flex justify-content-between align-items-center">
+        <span>a Todo example...</span>
+        <i class="far fa-trash-alt delete"></i>
+      </li> -->
+    </ul>
+
+    <!-- Adding new todo -->
+    <form class="addNew text-center my-4">
+      <label class="text-light">Add a new todo <img src="plus.png"></label>
+      <input class="form-control m-auto" type="text" name="add" />
+    </form>
+
+    <button id="reset"><a href="http://127.0.0.1:5500/to-do/index.html">Reset</a></button>
+
+  </div>
+
+
+  <script src="main.js"></script>
+</body>
+
+</html>
