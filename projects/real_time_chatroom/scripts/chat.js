@@ -25,11 +25,25 @@ class Chatroom {
         const response = await this.chats.add(chat);
         return response;
     }
+
+    getChat(callback) {
+        this.chats
+            .onSnapshot(snapshot => {
+                snapshot.docChanges().forEach(change => {
+                    if(change.type === 'added') {
+                        callback(change.doc.data());
+                    }
+                });
+            });
+    }
 }
 
 const chatroom = new Chatroom('gaming', 'Mo');
-chatroom.addChat("hello everyone!")
-    .then(() => console.log('chat added'))
-    .catch(error => {
-        console.log(error)
-    });
+// chatroom.addChat("hello everyone!")
+//     .then(() => console.log('chat added'))
+//     .catch(error => {
+//         console.log(error)
+//     });
+chatroom.getChat(data => {
+    console.log(data);
+});
