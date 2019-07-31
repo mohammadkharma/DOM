@@ -27,7 +27,7 @@ class Chatroom {
         return response;
     }
 
-    getChat(callback) {
+    getChats(callback) {
         this.unSub = this.chats
             .where('room', '==', this.room)
             .orderBy('created_at')
@@ -53,16 +53,13 @@ class Chatroom {
     }
 }
 
-const chatroom = new Chatroom('general', 'Mo');
-chatroom.getChat(data => {
-    console.log(data);
-});
+// chatroom.getChat(data => {
+//     console.log(data);
+// });
 
-setTimeout(() => {
-chatroom.updateRoom('gaming');
-chatroom.updateName('Mike');
-chatroom.getChat(data => {
-    console.log(data);
-});
-chatroom.addChat('hello');
-}, 3000)
+// setTimeout(() => {
+// chatroom.updateRoom('gaming');
+// chatroom.updateName('Mike');
+
+// chatroom.addChat('hello');
+// }, 3000)
