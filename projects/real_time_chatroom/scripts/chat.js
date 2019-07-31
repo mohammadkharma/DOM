@@ -8,7 +8,8 @@ class Chatroom {
     constructor(room, username) {
         this.room = room,
             this.username = username,
-            this.chats = db.collection('chats')
+            this.chats = db.collection('chats'),
+            this.unSub;
     }
 
     // format a chat object
@@ -27,23 +28,41 @@ class Chatroom {
     }
 
     getChat(callback) {
-        this.chats
+        this.unSub = this.chats
+            .where('room', '==', this.room)
+            .orderBy('created_at')
             .onSnapshot(snapshot => {
                 snapshot.docChanges().forEach(change => {
-                    if(change.type === 'added') {
+                    if (change.type === 'added') {
                         callback(change.doc.data());
                     }
                 });
             });
     }
+
+    updateName(username) {
+        this.username = username;
+    }
+
+    updateRoom (room) {
+        this.room = room;
+        console.log('room updated');
+        if(this.unSub()) {
+            this.unSub();
+        }
+    }
 }
 
-const chatroom = new Chatroom('gaming', 'Mo');
-// chatroom.addChat("hello everyone!")
-//     .then(() => console.log('chat added'))
-//     .catch(error => {
-//         console.log(error)
-//     });
+const chatroom = new Chatroom('general', 'Mo');
 chatroom.getChat(data => {
     console.log(data);
 });
+
+setTimeout(() => {
+chatroom.updateRoom('gaming');
+chatroom.updateName('Mike');
+chatroom.getChat(data => {
+    console.log(data);
+});
+chatroom.addChat('hello');
+}, 3000)
