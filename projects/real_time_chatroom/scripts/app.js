@@ -13,9 +13,12 @@ newChatForm.addEventListener('submit', e => {
         .catch(error => console.log(error));
 });
 
+// check localStorage for a name
+const username = localStorage.username ? localStorage.username : 'anon';
+
 // class instances
 const chatUI = new ChatUI(chatList);
-const chatroom = new Chatroom('general', 'Mo');
+const chatroom = new Chatroom('general', username);
 
 // adding new name
 newNameForm.addEventListener('submit', e => {
