@@ -1,20 +1,33 @@
 .container {
-    max-width: 600px;
+    max-width: 800px;
+    border-radius: 20px;
+    height: 100%;
+}
+
+.chat-window {
+    height: 40vh;
+    overflow: auto;
+}
+
+li {
+    border-radius: 50px;
 }
 
 .btn {
-    background: rgb(88, 88, 231);
+    background: #999;
     color: white;
     outline: none !important;
     box-shadow: none !important;
 }
 
-.btn:focus {
+.btn:hover {
+    background: rgba(3, 121, 22, 0.61);
     outline: none !important;
 }
 
 .username {
     font-weight: bold;
+    color: rgb(5, 150, 29)
 }
 
 .time {

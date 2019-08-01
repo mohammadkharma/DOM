@@ -54,7 +54,7 @@ file events:
 ------------
 
 update room:
-    - click event listener that grabs the clicked button, where each button refer to a specific room, and apply the updateRoom() method on it that will switch the room to the clicked one by clearing the UI from the old room chat and restart the real time event listener so it watch the new room chats and output the new room chat
+    - click event listener that grabs the clicked button, where each button refer to a specific room, then styles the active button and apply the updateRoom() method on it that will switch the room to the clicked one by clearing the UI from the old room chat and restart the real time event listener so it watch the new room chats and output the new room chat. 
 
 adding new chat:
     - submit event listener that grabs the user input value from the message field and apply the addChat() method on it that will output it in DOM and save it in the database

@@ -4,10 +4,20 @@ const newChatForm = document.querySelector('.new-chat');
 const newNameForm = document.querySelector('.new-name');
 const updateMsg = document.querySelector('.update-msg');
 const rooms = document.querySelector('.chat-rooms');
+const roomsButtons = document.querySelectorAll('.chat-rooms button');
 
 // update room chat
 rooms.addEventListener('click', e => {
     e.preventDefault();
+
+    roomsButtons.forEach(room => { // styling active room
+        if(room.id === e.target.getAttribute('id')) {
+            room.style.background = 'green';
+        } else {
+            room.style.background = 'blue';            
+        }
+    });
+
     if (e.target.tagName === 'BUTTON') {
         chatUI.clear(); // clearing the old room chat
         chatroom.updateRoom(e.target.getAttribute('id')); // switching to the new room
