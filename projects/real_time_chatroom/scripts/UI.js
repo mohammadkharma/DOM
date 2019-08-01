@@ -1,18 +1,17 @@
-// Page content:
 // Render a chat templates to DOM
 // Clear the list of chats (when the room changes)
 
 class ChatUI {
-    constructor(list){
+    constructor(list){ // (list) is where to display the data for the UI
         this.list = list;
     }
 
     clear() {
-        this.list.innerHTML = '';
+        this.list.innerHTML = ''; // clearing the UI from data when switching to another room
     }
 
-    render(data) {
-        const when = dateFns.distanceInWordsToNow(
+    render(data) { // outputting new chats in DOM
+        const when = dateFns.distanceInWordsToNow( // changing the date format
             data.created_at.toDate(),
             {addSuffix: true}
         )

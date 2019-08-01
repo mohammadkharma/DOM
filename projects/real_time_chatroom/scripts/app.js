@@ -5,31 +5,24 @@ const newNameForm = document.querySelector('.new-name');
 const updateMsg = document.querySelector('.update-msg');
 const rooms = document.querySelector('.chat-rooms');
 
-// add new chat
-newChatForm.addEventListener('submit', e => {
-    e.preventDefault();
-    const message = newChatForm.message.value.trim();
-    chatroom.addChat(message)
-        .then(() => newChatForm.reset())
-        .catch(error => console.log(error));
-});
-
 // update room chat
 rooms.addEventListener('click', e => {
     e.preventDefault();
     if (e.target.tagName === 'BUTTON') {
-        chatUI.clear();
-        chatroom.updateRoom(e.target.getAttribute('id'));
-        chatroom.getChats(data => chatUI.render(data));
+        chatUI.clear(); // clearing the old room chat
+        chatroom.updateRoom(e.target.getAttribute('id')); // switching to the new room
+        chatroom.getChats(data => chatUI.render(data)); // restarting the real time event listener
     }
 });
 
-// check localStorage for a name
-const username = localStorage.username ? localStorage.username : 'anon';
-
-// class instances
-const chatUI = new ChatUI(chatList);
-const chatroom = new Chatroom('general', username);
+// add new chat
+newChatForm.addEventListener('submit', e => {
+    e.preventDefault();
+    const message = newChatForm.message.value.trim();
+    chatroom.addChat(message) // adding chat
+        .then(() => newChatForm.reset()) // resetting input field
+        .catch(error => console.log(error));
+});
 
 // adding new name
 newNameForm.addEventListener('submit', e => {
@@ -38,11 +31,16 @@ newNameForm.addEventListener('submit', e => {
     console.log(newName);
     chatroom.updateName(newName);
     newNameForm.reset();
-    updateMsg.innerText = `Your name was updated to ${newName}`;
+    updateMsg.innerText = `Your name was updated to ${newName}`; // showing then hiding the update name notification
     setTimeout(() => updateMsg.innerText = '', 3000);
 });
 
+// check localStorage for a name
+const username = localStorage.username ? localStorage.username : 'anon';
 
+// class instances
+const chatUI = new ChatUI(chatList); // from UI.js
+const chatroom = new Chatroom('general', username); // from chat.js
 
-// get chats and render
-chatroom.getChats(data => chatUI.render(data));
+// getting new chats and outputting them to DOM
+chatroom.getChats(data => chatUI.render(data)); 
