@@ -14,7 +14,7 @@ rooms.addEventListener('click', e => {
         if(room.id === e.target.getAttribute('id')) {
             room.style.background = 'green';
         } else {
-            room.style.background = 'blue';            
+            room.style.background = '#999';            
         }
     });
 
