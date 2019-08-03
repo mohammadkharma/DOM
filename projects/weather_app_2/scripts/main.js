@@ -20,17 +20,43 @@ const updateCity = async city => {
 // --------------------------------------------------------------------- //
 const cityName = document.querySelector('#cityName');
 const weatherText = document.querySelector('#weatherText');
+const toggleText = document.querySelector('#toggleText');
+const toggleBtn = document.querySelector('#toggleBtn');
+const wind = document.querySelector('#wind');
+const humidity = document.querySelector('#humidity');
+const dayOrNight = document.querySelector('#dayOrNight');
+const details = document.querySelector('#details');
+const icon = document.querySelector('.icon');
+const date = document.querySelector('#date');
+const form = document.querySelector('form');
 const temp = document.querySelector('#temp');
 const day1 = document.querySelector('#day1');
 const day2 = document.querySelector('#day2');
 const day3 = document.querySelector('#day3');
 const day4 = document.querySelector('#day4');
 const day5 = document.querySelector('#day5');
+
 const updateUI = data => {
+
     const { cityDetails, cityConditions, nextDays } = data;
-    cityName.innerHTML = cityDetails.EnglishName;
+    cityName.innerHTML = `${cityDetails.EnglishName}, ${cityDetails.Country.ID}`;
     weatherText.innerHTML = cityConditions.WeatherText;
     temp.innerHTML = cityConditions.Temperature.Metric.Value;
+    wind.innerHTML = cityConditions.Wind.Speed.Imperial.Value;
+    humidity.innerHTML = cityConditions.RelativeHumidity;
+
+    getDate(date, cityConditions);
+
+    toggleBtn.addEventListener('click', e => {
+        e.preventDefault();
+        toggle(toggleText);
+    });
+
+    const timeSrc = cityConditions.IsDayTime ? 'media/images/day.svg' : 'media/images/night.svg';
+    details.style.backgroundImage = `url(${timeSrc})`;
+
+    const iconSrc = `media/icons/${cityConditions.WeatherIcon}.svg`;
+    icon.setAttribute('src', iconSrc);
 
     day1.innerHTML = nextDays.DailyForecasts[0].Temperature.Maximum.Value;
     day2.innerHTML = nextDays.DailyForecasts[1].Temperature.Maximum.Value;
@@ -39,21 +65,23 @@ const updateUI = data => {
     day5.innerHTML = nextDays.DailyForecasts[4].Temperature.Maximum.Value;
 
 }
-updateCity('berlin').then(data => updateUI(data)).catch(err => console.log(err));
+updateCity('berlin')
+    .then(data => updateUI(data))
+    .catch(err => console.log(err));
 
 
 // --------------------------------------------------------------------- //
 
-
-const date = document.querySelector('#text');
-getDate(date);
-
-// --------------------------------------------------------------------- //
-const toggleText = document.querySelector('#toggleText');
-const toggleBtn = document.querySelector('#toggleBtn');
-toggleBtn.addEventListener('click', e => {
+form.addEventListener('submit', e => {
     e.preventDefault();
-    toggle(toggleText);
+    let city = form.city.value.trim()
+    form.reset();
+
+
+
 });
 
-// --------------------------------------------------------------------- //
+
+
+
+

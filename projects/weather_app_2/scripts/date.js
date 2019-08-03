@@ -1,6 +1,5 @@
-function getDate (tag) {
-    const now = new Date();
-    const day = now.toLocaleString();
-    tag.innerText = day;
+function getDate (tag, object) {
+    let date = new Date(object.LocalObservationDateTime);
+    tag.innerHTML = date.toDateString();
 }
 export {getDate};
