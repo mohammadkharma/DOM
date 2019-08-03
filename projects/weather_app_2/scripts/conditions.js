@@ -8,7 +8,7 @@ const getCity = async cityName => {
     const response = await fetch(mainURL+query);
     const data = await response.json();
 
-    console.log('getCity()', data[0]);
+    // console.log('getCity()', data[0]);
     return data[0];
 }
 
@@ -21,7 +21,7 @@ const getConditions = async (cityKey) => {
     const response = await fetch(mainURL+query);
     const data = await response.json();
 
-    console.log('getConditions()', data[0]);
+    // console.log('getConditions()', data[0]);
     return data[0];
 }
 
@@ -32,7 +32,7 @@ const getNextDays = async cityKey => {
     const response = await fetch(mainURL+query);
     const data = await response.json();
 
-    console.log('getNextDays()', data);
+    // console.log('getNextDays()', data);
     return data;
 }
 
