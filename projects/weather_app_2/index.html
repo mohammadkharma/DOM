@@ -10,15 +10,40 @@
 </head>
 
 <body>
+
     <h1>Weather App 2</h1>
 
-    <div class="container">
+    <form action="">
+        <label for="city">enter city</label>
+        <input type="text" name="city" id="city">
+        <input type="submit" name="submit" id="submit">
+    </form>
 
-        <p id="text"></p>
+    <div class="media">
+        <img src="" id="dayOrNight">
+        <img src="" class="icon">
+    </div>
 
-        <button id="toggleBtn">Click Me</button>
+    <div class="details-box">
 
-        <p id="toggleText">Hello</p>
+        <p id="cityName">city name</p>
+        <p id="weatherText">weather text</p>
+        <p class="temp">temperature</p>
+
+        <div class="date-box">
+            <p id="text"></p>
+        </div>
+
+        <div class="toggle-box">
+            <button id="toggleBtn">Click Me</button>
+            <p id="toggleText">Hello</p>
+        </div>
+
+    </div>
+
+
+
+
 
     </div>
 

@@ -18,6 +18,13 @@ const updateCity = async city => {
 
 // --------------------------------------------------------------------- //
 
+const updateUI = data => {
+    
+}
+
+// --------------------------------------------------------------------- //
+
+
 const date = document.querySelector('#text');
 getDate(date);
 
@@ -28,3 +35,5 @@ toggleBtn.addEventListener('click', e => {
     e.preventDefault();
     toggle(toggleText);
 });
+
+// --------------------------------------------------------------------- //
