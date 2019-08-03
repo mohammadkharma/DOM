@@ -8,7 +8,7 @@ toggleState();
 console.log('main.js is ready');
 // ------------------------------------------------------- //
 
-const mainKey = "L6TYjZMGAbuxAAvUPFXzRoPiZZKq7ZEt";
+const mainKey = "rBUfGvODV6xxCcJ29sjn5bzCcGk98fWi";
 
 const getCity = async cityName => {
 
@@ -37,14 +37,24 @@ const getConditions = async (cityKey) => {
     return data[0];
 }
 
+const getNextDays = async cityKey => {
+    const mainURL = 'http://dataservice.accuweather.com/forecasts/v1/daily/5day/';
+    const query = `${cityKey}?apikey=${mainKey}&details=true`;
+
+    const response = await fetch(mainURL+query);
+    const data = await response.json();
+
+    console.log('getNextDays', data.DailyForecasts);
+    return data;
+}
+
 
 const updateCity = async city => {
 
 const cityDetails = await getCity(city);
-const cityWeatherConditions = await getConditions(cityDetails.Key);
-
-const merged = {cityDetails, cityWeatherConditions};
-console.log(merged);
+const cityConditions = await getConditions(cityDetails.Key);
+const nextDays = await getNextDays(cityDetails.Key);
+const detailsAndConditions = {cityDetails, cityConditions, };
 
 }
 
