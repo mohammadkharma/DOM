@@ -4,6 +4,7 @@ const newChatForm = document.querySelector('.new-chat');
 const newNameForm = document.querySelector('.new-name');
 const updateMsg = document.querySelector('.update-msg');
 const rooms = document.querySelector('.chat-rooms');
+const chatWindow = document.querySelector('.chat-window');
 const roomsButtons = document.querySelectorAll('.chat-rooms button');
 
 // update room chat
@@ -12,7 +13,8 @@ rooms.addEventListener('click', e => {
 
     roomsButtons.forEach(room => { // styling active room
         if(room.id === e.target.getAttribute('id')) {
-            room.style.background = 'green';
+            room.style.background = '#363636';
+            chatWindow.style.background = '#363636';
         } else {
             room.style.background = '#999';            
         }
@@ -50,7 +52,7 @@ const username = localStorage.username ? localStorage.username : 'anon';
 
 // class instances
 const chatUI = new ChatUI(chatList); // from UI.js
-const chatroom = new Chatroom('general', username); // from chat.js
+const chatroom = new Chatroom('public', username); // from chat.js
 
 // getting new chats and outputting them to DOM
 chatroom.getChats(data => chatUI.render(data)); 

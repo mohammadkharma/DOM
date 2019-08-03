@@ -7,15 +7,16 @@
 .chat-window {
     height: 40vh;
     overflow: auto;
+    padding: 20px;
+    margin-top: -20px;
 }
 
 li {
-    border-radius: 50px;
+    margin-top: -10px;
 }
 
 .btn {
     background: #999;
-    color: white;
     outline: none !important;
     box-shadow: none !important;
 }
@@ -23,6 +24,7 @@ li {
 .btn:hover {
     background: rgba(3, 121, 22, 0.61);
     outline: none !important;
+    color: white;
 }
 
 .username {

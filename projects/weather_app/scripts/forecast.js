@@ -11,7 +11,7 @@
 // Storing the basic key in a variable:
 // ------------------------------------
 
-const appKey = '1ZjAmnqeJAB2LPsmXDt4MlrMNX0yKLGv';
+const appKey = 'uLcGCTGBk2tvfKmztREtgRCGXG1U17sG';
 
 
 

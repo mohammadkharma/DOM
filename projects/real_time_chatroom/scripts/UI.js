@@ -16,12 +16,13 @@ class ChatUI {
             {addSuffix: true}
         )
         const html = `
-        <li class="list-group-item">
+        <li class="list-group-item rounded">
         <span class="username">${data.username}:</span>
         <span class="message">${data.message}</span>
         <span class="time">${when}</span>
         </li>
-        `
+        `;
+        
         this.list.innerHTML += html;
     }
 }
