@@ -1,5 +1,6 @@
-function dateState() {
-    console.log('------ date.js is ready ------');
+function getDate (tag) {
+    const now = new Date();
+    const day = now.toLocaleString();
+    tag.innerText = day;
 }
-
-export {dateState};
+export {getDate};
