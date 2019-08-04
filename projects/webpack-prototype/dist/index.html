@@ -2,14 +2,65 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <title>Webpack Prototype</title>
-
-  <link rel="stylesheet" type="text/css" href="banner.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Weather App 2</title>
 </head>
 
 <body>
-  <script src="main.js"></script>
+
+
+
+
+
+    <div class="smartphone">
+        <div class="content">
+
+            <div class="container">
+
+                <form>
+                    <label for="city"></label>
+                    <input type="text" placeholder="enter city..." name="city">
+                </form>
+
+                <div class="city-date">
+                    <p id="cityName">city name</p>
+                    <p id="date"></p>
+                </div>
+
+                <div class="temp">
+                    <p id="tempC"></p>
+                    <p id="tempF"></p>
+                    <button id="toggleBtn">&deg;F ?</button>
+                </div>
+
+                <div class="wind-humidity">
+                    <p id="wind"></p>
+                    <p id="humidity"></p>
+                </div>
+
+                <div class="icon-text">
+                    <img src="" class="icon">
+                    <p id="weatherText"></p>
+                </div>
+
+                    
+                    <div id="comingFive">
+                        <h3>Coming days</h3>
+                    </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    
+
+
+    <script src="main.js"></script>
+
 </body>
 
 </html>

@@ -1,0 +1,110 @@
+.content {
+  background-size: 100% 100% !important;
+}
+
+
+
+form {
+  text-align: center;
+}
+
+input {
+  padding: 3px;
+  border: 0;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.city-date, .temp, .wind-humidity, .icon-text {
+  display: flex;
+  justify-content: space-around;
+  background: rgba(255, 255, 255, 0.877);
+  margin: 3px;
+  border-radius: 20px;
+}
+
+.icon {
+  width: 50px;
+}
+
+#tempF {
+  display: none;
+}
+
+#toggleBtn {
+  background: transparent;
+  border: 0;
+  font-size: 20px;
+}
+
+#comingFive {
+  position: absolute;
+  justify-content: space-evenly;
+  bottom: 0;
+  display: flex;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.877);
+  font-size: 15px;
+  width: 100%;
+}
+
+#toggleBtn:hover {
+  background: gray;
+  cursor: pointer;
+}
+
+
+/* ------------------------------------------------------------------- */
+
+.smartphone {
+  position: relative;
+  width: 25vw;
+  height: 70vh;
+  margin: auto;
+  border: 16px black solid;
+  border-top-width: 60px;
+  border-bottom-width: 60px;
+  border-radius: 36px;
+}
+
+/* The horizontal line on the top of the device */
+
+.smartphone:before {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 5px;
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #333;
+  border-radius: 10px;
+}
+
+/* The circle on the bottom of the device */
+
+.smartphone:after {
+  content: '';
+  display: block;
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  left: 50%;
+  bottom: -65px;
+  transform: translate(-50%, -50%);
+  background: #333;
+  border-radius: 50%;
+}
+
+/* The screen (or content) of the device */
+
+.smartphone .content {
+  width: 100%;
+  height: 100%;
+  background: white;
+  background-image: url('./media/images/night.svg');
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
