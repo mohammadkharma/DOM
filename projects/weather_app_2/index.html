@@ -11,60 +11,55 @@
 
 <body>
 
-    <h1>Weather App 2</h1>
-
-    <div class="container">
-
-        <form>
-            <label for="city"></label>
-            <input type="text" placeholder="enter city..." name="city">
-        </form>
-
-        <div class="media">
-            <img src="https://via.placeholder.com/400x300" id="dayOrNight">
-            <img src="" class="icon">
-        </div>
 
 
-        <div id="details">
-            <p id="cityName">city name</p>
-            <p id="weatherText">weather text</p>
-            <p id="temp">temperature</p>
-            <p id="wind"></p>
-            <p id="humidity"></p>
-        </div>
-
-        <div class="date-box">
-            <p id="date"></p>
-        </div>
-
-        <div class="toggle-box">
-            <button id="toggleBtn">Click Me</button>
-            <p id="toggleText">Hello</p>
-        </div>
-
-        <div id="comingFive">
-            <h5>next days</h5>
-            <p id="day1"></p>
-            <p id="day2"></p>
-            <p id="day3"></p>
-            <p id="day4"></p>
-            <p id="day5"></p>
-        </div>
-
-    </div>
 
 
     <div class="smartphone">
         <div class="content">
+
+            <div class="container">
+
+                <form>
+                    <label for="city"></label>
+                    <input type="text" placeholder="enter city..." name="city">
+                </form>
+
+                <div class="city-date">
+                    <p id="cityName">city name</p>
+                    <p id="date"></p>
+                </div>
+
+                <div class="temp">
+                    <p id="tempC"></p>
+                    <p id="tempF"></p>
+                    <button id="toggleBtn">&deg;F ?</button>
+                </div>
+
+                <div class="wind-humidity">
+                    <p id="wind"></p>
+                    <p id="humidity"></p>
+                </div>
+
+                <div class="icon-text">
+                    <img src="" class="icon">
+                    <p id="weatherText"></p>
+                </div>
+
+                    
+                    <div id="comingFive">
+                        <h3>Coming days</h3>
+                    </div>
+
+            </div>
+
         </div>
     </div>
 
+    
 
-    </div>
 
     <script type="module" src="./scripts/main.js"></script>
-
 
 </body>
 

@@ -1,4 +1,4 @@
-const mainKey = "oCqLVi7JhYhBpmK3qfOAGEOEgJiKWI7n";
+const mainKey = "MWxCBtG8kaIDkmeElRfGuWcrJ6ycu6J3";
 
 const getCity = async cityName => {
 
@@ -11,6 +11,8 @@ const getCity = async cityName => {
     return data[0];
 }
 
+// --------------------------------------------------------------------- //
+
 const getConditions = async (cityKey) => {
 
     const mainURL = 'http://dataservice.accuweather.com/currentconditions/v1/';
@@ -22,9 +24,11 @@ const getConditions = async (cityKey) => {
     return data[0];
 }
 
+// --------------------------------------------------------------------- //
+
 const getNextDays = async cityKey => {
     const mainURL = 'http://dataservice.accuweather.com/forecasts/v1/daily/5day/';
-    const query = `${cityKey}?apikey=${mainKey}&details=true`;
+    const query = `${cityKey}?details=true&apikey=${mainKey}`;
 
     const response = await fetch(mainURL+query);
     const data = await response.json();
@@ -32,5 +36,6 @@ const getNextDays = async cityKey => {
     return data;
 }
 
+// --------------------------------------------------------------------- //
 
 export {getCity, getConditions, getNextDays};
