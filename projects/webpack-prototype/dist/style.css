@@ -37,22 +37,15 @@ input {
   font-size: 20px;
 }
 
-#comingFive {
-  position: absolute;
-  justify-content: space-evenly;
-  bottom: 0;
-  display: flex;
-  border-radius: 20px;
-  background: rgba(255, 255, 255, 0.877);
-  font-size: 15px;
-  width: 100%;
-}
-
 #toggleBtn:hover {
   background: gray;
   cursor: pointer;
 }
 
+table {
+  color: white;
+  border: 1px solid red;
+}
 
 /* ------------------------------------------------------------------- */
 

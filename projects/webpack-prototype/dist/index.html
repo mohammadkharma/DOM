@@ -2,11 +2,11 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css">
-    <title>Weather App 2</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>Weather App 2</title>
 </head>
 
 <body>
@@ -15,51 +15,82 @@
 
 
 
-    <div class="smartphone">
-        <div class="content">
+  <div class="smartphone">
+    <div class="content">
 
-            <div class="container">
+      <div class="container">
 
-                <form>
-                    <label for="city"></label>
-                    <input type="text" placeholder="enter city..." name="city">
-                </form>
+        <form>
+          <label for="city"></label>
+          <input type="text" placeholder="enter city..." name="city">
+        </form>
 
-                <div class="city-date">
-                    <p id="cityName">city name</p>
-                    <p id="date"></p>
-                </div>
-
-                <div class="temp">
-                    <p id="tempC"></p>
-                    <p id="tempF"></p>
-                    <button id="toggleBtn">&deg;F ?</button>
-                </div>
-
-                <div class="wind-humidity">
-                    <p id="wind"></p>
-                    <p id="humidity"></p>
-                </div>
-
-                <div class="icon-text">
-                    <img src="" class="icon">
-                    <p id="weatherText"></p>
-                </div>
-
-                    
-                    <div id="comingFive">
-                        <h3>Coming days</h3>
-                    </div>
-
-            </div>
-
+        <div class="city-date">
+          <p id="cityName">city name</p>
+          <p id="date"></p>
         </div>
+
+        <div class="temp">
+          <p id="tempC"></p>
+          <p id="tempF"></p>
+          <button id="toggleBtn">&deg;F ?</button>
+        </div>
+
+        <div class="wind-humidity">
+          <p id="wind"></p>
+          <p id="humidity"></p>
+        </div>
+
+        <div class="icon-text">
+          <img src="" class="icon">
+          <p id="weatherText"></p>
+        </div>
+
+
+        <table>
+        
+          <tr>
+            <th>Coming days</th>
+            <th>Min</th>
+            <th>Max</th>
+          </tr>
+          <tr>
+            <td><p id="date1"></p></td>
+            <td><p id="day1min"></p></td>
+            <td><p id="day1mxn"></p></td>
+          </tr>
+          <tr>
+            <td><p id="date2"></p></td>
+            <td><p id="day2min"></p></td>
+            <td><p id="day2mxn"></p></td>
+          </tr>
+          <tr>
+            <td><p id="date3"></p></td>
+            <td><p id="day3min"></p></td>
+            <td><p id="day3mxn"></p></td>
+          </tr>
+          <tr>
+            <td><p id="date4"></p></td>
+            <td><p id="day4min"></p></td>
+            <td><p id="day4mxn"></p></td>
+          </tr>
+          <tr>
+            <td><p id="date5"></p></td>
+            <td><p id="day5min"></p></td>
+            <td><p id="day5mxn"></p></td>
+          </tr>
+        
+        </table>
+
+      </div>
+
     </div>
+  </div>
 
-    
 
 
-    <script src="main.js"></script>
+
+  <script src="main.js"></script>
 
 </body>
 
