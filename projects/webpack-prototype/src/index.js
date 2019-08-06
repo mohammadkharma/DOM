@@ -2,59 +2,59 @@ import { getCity, getConditions, getNextDays } from './conditions.js'
 import { getDate } from './date.js'
 import { toggle } from './toggle.js'
 
-import isNight from './media/images/isNight.jpg'
-import isDay from './media/images/isDay.png'
+import isNight from './images/isNight.jpg'
+import isDay from './images/isDay.png'
 // import icons from './media/icons'
-import i1 from './media/icons/7.svg'
-import i2 from './media/icons/7.svg'
-import i3 from './media/icons/7.svg'
-import i4 from './media/icons/7.svg'
-import i5 from './media/icons/7.svg'
-import i6 from './media/icons/7.svg'
-import i7 from './media/icons/7.svg'
-import i8 from './media/icons/7.svg'
-import i9 from './media/icons/7.svg'
-import i10 from './media/icons/7.svg'
-import i11 from './media/icons/7.svg'
-import i12 from './media/icons/7.svg'
-import i13 from './media/icons/7.svg'
-import i14 from './media/icons/7.svg'
-import i15 from './media/icons/7.svg'
-import i16 from './media/icons/7.svg'
-import i17 from './media/icons/7.svg'
-import i18 from './media/icons/7.svg'
-import i19 from './media/icons/7.svg'
-import i20 from './media/icons/7.svg'
-import i21 from './media/icons/7.svg'
-import i22 from './media/icons/7.svg'
-import i23 from './media/icons/7.svg'
-import i24 from './media/icons/7.svg'
-import i25 from './media/icons/7.svg'
-import i26 from './media/icons/7.svg'
-import i27 from './media/icons/7.svg'
-import i28 from './media/icons/7.svg'
-import i29 from './media/icons/7.svg'
-import i30 from './media/icons/7.svg'
-import i31 from './media/icons/7.svg'
-import i32 from './media/icons/7.svg'
-import i33 from './media/icons/7.svg'
-import i34 from './media/icons/7.svg'
-import i35 from './media/icons/7.svg'
-import i36 from './media/icons/7.svg'
-import i37 from './media/icons/7.svg'
-import i38 from './media/icons/7.svg'
-import i39 from './media/icons/7.svg'
-import i40 from './media/icons/7.svg'
-import i41 from './media/icons/7.svg'
-import i42 from './media/icons/7.svg'
-import i43 from './media/icons/7.svg'
-import i44 from './media/icons/7.svg'
+import i7 from './icons/7.svg'
+// import i2 from './media/icons/7.svg'
+// import i3 from './media/icons/7.svg'
+// import i4 from './media/icons/7.svg'
+// import i5 from './media/icons/7.svg'
+// import i6 from './media/icons/7.svg'
+// import i7 from './media/icons/7.svg'
+// import i8 from './media/icons/7.svg'
+// import i9 from './media/icons/7.svg'
+// import i10 from './media/icons/7.svg'
+// import i11 from './media/icons/7.svg'
+// import i12 from './media/icons/7.svg'
+// import i13 from './media/icons/7.svg'
+// import i14 from './media/icons/7.svg'
+// import i15 from './media/icons/7.svg'
+// import i16 from './media/icons/7.svg'
+// import i17 from './media/icons/7.svg'
+// import i18 from './media/icons/7.svg'
+// import i19 from './media/icons/7.svg'
+// import i20 from './media/icons/7.svg'
+// import i21 from './media/icons/7.svg'
+// import i22 from './media/icons/7.svg'
+// import i23 from './media/icons/7.svg'
+// import i24 from './media/icons/7.svg'
+// import i25 from './media/icons/7.svg'
+// import i26 from './media/icons/7.svg'
+// import i27 from './media/icons/7.svg'
+// import i28 from './media/icons/7.svg'
+// import i29 from './media/icons/7.svg'
+// import i30 from './media/icons/7.svg'
+// import i31 from './media/icons/7.svg'
+// import i32 from './media/icons/7.svg'
+// import i33 from './media/icons/7.svg'
+// import i34 from './media/icons/7.svg'
+// import i35 from './media/icons/7.svg'
+// import i36 from './media/icons/7.svg'
+// import i37 from './media/icons/7.svg'
+// import i38 from './media/icons/7.svg'
+// import i39 from './media/icons/7.svg'
+// import i40 from './media/icons/7.svg'
+// import i41 from './media/icons/7.svg'
+// import i42 from './media/icons/7.svg'
+// import i43 from './media/icons/7.svg'
+// import i44 from './media/icons/7.svg'
 
-const arr = [i1, i2, i3, i4, i5, i6, i7, i8, i9, i10,
-  i11, i12, i13, i14, i15, i16, i17, i18, i19, i20,
-  i21, i22, i23, i24, i25, i26, i27, i28, i29, i30,
-  i31, i32, i33, i34, i35, i36, i37, i38, i39, i40,
-  i41, i42, i43, i44];
+// const iconsArr = [i1, i2, i3, i4, i5, i6, i7, i8, i9, i10,
+//   i11, i12, i13, i14, i15, i16, i17, i18, i19, i20,
+//   i21, i22, i23, i24, i25, i26, i27, i28, i29, i30,
+//   i31, i32, i33, i34, i35, i36, i37, i38, i39, i40,
+//   i41, i42, i43, i44];
 const cityName = document.querySelector('#cityName');
 const weatherText = document.querySelector('#weatherText');
 const toggleBtn = document.querySelector('#toggleBtn');
@@ -118,33 +118,24 @@ const updateUI = data => {
   const timeSrc = cityConditions.IsDayTime ? isDay : isNight;
   content.style.backgroundImage = `url(${timeSrc})`;
 
- 
+  icon.setAttribute('src', i7);
+  icon.style.width = '4vw';
 
-  date1.innerHTML = `${new Date(nextDays.DailyForecasts[0].Date).getDate()}/${new Date(nextDays.DailyForecasts[0].Date).getMonth()}`;
+  date1.innerHTML = `${new Date(nextDays.DailyForecasts[0].Date).toDateString()}`;
   day1min.innerHTML = `${nextDays.DailyForecasts[0].Temperature.Minimum.Value} &deg;F`;
   day1max.innerHTML = `${nextDays.DailyForecasts[0].Temperature.Maximum.Value} &deg;F`;
-  date2.innerHTML = `${new Date(nextDays.DailyForecasts[1].Date).getDate()}/${new Date(nextDays.DailyForecasts[1].Date).getMonth()}`;
+  date2.innerHTML = `${new Date(nextDays.DailyForecasts[1].Date).toDateString()}`;
   day2min.innerHTML = `${nextDays.DailyForecasts[1].Temperature.Minimum.Value} &deg;F`;
   day2max.innerHTML = `${nextDays.DailyForecasts[1].Temperature.Maximum.Value} &deg;F`;
-  date3.innerHTML = `${new Date(nextDays.DailyForecasts[2].Date).getDate()}/${new Date(nextDays.DailyForecasts[2].Date).getMonth()}`;
+  date3.innerHTML = `${new Date(nextDays.DailyForecasts[2].Date).toDateString()}`;
   day3min.innerHTML = `${nextDays.DailyForecasts[2].Temperature.Minimum.Value} &deg;F`;
   day3max.innerHTML = `${nextDays.DailyForecasts[2].Temperature.Maximum.Value} &deg;F`;
-  date4.innerHTML = `${new Date(nextDays.DailyForecasts[3].Date).getDate()}/${new Date(nextDays.DailyForecasts[3].Date).getMonth()}`;
+  date4.innerHTML = `${new Date(nextDays.DailyForecasts[3].Date).toDateString()}`;
   day4min.innerHTML = `${nextDays.DailyForecasts[3].Temperature.Minimum.Value} &deg;F`;
   day4max.innerHTML = `${nextDays.DailyForecasts[3].Temperature.Maximum.Value} &deg;F`;
-  date5.innerHTML = `${new Date(nextDays.DailyForecasts[4].Date).getDate()}/${new Date(nextDays.DailyForecasts[4].Date).getMonth()}`;
+  date5.innerHTML = `${new Date(nextDays.DailyForecasts[4].Date).toDateString()}`;
   day5min.innerHTML = `${nextDays.DailyForecasts[4].Temperature.Minimum.Value} &deg;F`;
   day5max.innerHTML = `${nextDays.DailyForecasts[4].Temperature.Maximum.Value} &deg;F`;
-
-  // nextDays.DailyForecasts.forEach(day => {
-  //     let html = `
-  //     <div style="margin-left: 15px;">
-  //     <p>${new Date(day.Date).getDate()}/${new Date(day.Date).getMonth() + 1}</p>
-  //     <p> ${day.Temperature.Maximum.Value} &deg;F</p>
-  //     </div>
-  //     `;
-  //     comingFive.innerHTML += html;
-  // });
 
 }
 

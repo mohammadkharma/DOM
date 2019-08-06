@@ -7,10 +7,10 @@ function toggle(c, f, btn) {
     f.style.display = 'block';
   }
 
-  if (btn.innerHTML = "&deg;F ?") {
-    btn.innerHTML = "&deg;C ?"
+  if (btn.innerHTML === "°F ?") {
+    btn.innerHTML = "°C?"
   } else {
-    (btn.innerHTML = "&deg;F ?")
+    btn.innerHTML = "°F ?";
   }
 }
 

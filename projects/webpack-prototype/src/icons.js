@@ -1,11 +1,13 @@
-function icons(arr, tag, object){
+function iconsFunc(arr, tag, object){
     const numArr = [];
     numArr.length = 44;
-   for(i=0;i<numArr.length;i++){
-       for (j=0;j<arr.length;j++) {
+   for(let i=0;i<numArr.length;i++){
+       for (let j=0;j<arr.length;j++) {
            if(i+1 === object.WeatherIcon) {
                tag.setAttribute('src', arr[j]);
            }
        }
    }
 }
+
+export { iconsFunc };

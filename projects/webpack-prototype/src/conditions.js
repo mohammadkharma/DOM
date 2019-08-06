@@ -1,4 +1,4 @@
-const mainKey = "mL1F1i1yNAARH5Ea4QtTGMx1TxNa6tJs";
+const mainKey = "JSN7z5WidbqTpBjjAYhRRo2NQXyvlNGl";
 
 const getCity = async cityName => {
 
