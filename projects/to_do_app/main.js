@@ -55,3 +55,8 @@ search.addEventListener('keyup', () => {
     searchTodos(term);
 });
 
+// Creating a click event for reset
+reset.addEventListener('click', e => {
+    e.preventDefault();
+    todoList.innerHTML = '';
+})

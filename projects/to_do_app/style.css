@@ -3,21 +3,22 @@ body {
     background: linear-gradient(to left, #000066 30%, #999966 100%);
 }
 
-#border {
+/* .border {
+    width: 40vw;
     float: right;
     margin-top: 5px;
     margin-right: 50px;
     padding: 30px;
     border-left: 2px solid #999966ab;
     border-bottom: 2px solid #999966ab;
-}
+} */
 
 .intro {
     padding: 30px;
     color: #fff;
     height: 50%;
     border-radius: 5px;
-    box-shadow: 40px -10px 70px 30px #000029; 
+    box-shadow: 40px -10px 70px 30px #000029;
     background: linear-gradient(to top, #000066 60%, #999966ab 100%);
 }
 
@@ -39,11 +40,10 @@ img {
 }
 
 .container {
-    max-width: 400px;
+    width: 40vw;
     border-radius: 50px;
-    margin-top: 50px;
-    margin-left: 100px;
-    height: 60%;
+    margin: auto;
+    display: block;
     font-size: 18px;
     box-shadow: 20px 20px 50px 10px blue;
 }
@@ -83,6 +83,10 @@ input[type=text], input[type=text]:focus {
     background: rgba(255, 255, 255, 0.658);
     border: 2px solid #000066cb;
     border-radius: 10px;
+}
+
+#reset:focus {
+    outline: none;
 }
 
 a {
