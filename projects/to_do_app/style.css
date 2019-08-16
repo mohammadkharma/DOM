@@ -11,7 +11,7 @@ body {
     padding: 30px;
     border-left: 2px solid #999966ab;
     border-bottom: 2px solid #999966ab;
-} */
+} 
 
 .intro {
     padding: 30px;
@@ -24,15 +24,15 @@ body {
 
 .intro h1 {
     border-bottom: 5px double rgba(34, 170, 224, 0.548);
-}
+} */
 
-p {
+/* p {
     font-size: 20px;
     display: flex;
     justify-content: space-between;
     padding: 5px;
     border-bottom: 1px solid rgba(34, 170, 224, 0.548);
-}
+} */
 
 img {
     width: 15px;
